@@ -135,6 +135,9 @@
   },
   "defaultProject": "Bank",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "cache": {
+      "enabled": false
+    }
   }
 }
