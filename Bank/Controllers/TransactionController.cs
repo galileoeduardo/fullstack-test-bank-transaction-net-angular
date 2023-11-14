@@ -1,5 +1,6 @@
 ﻿using Bank.Data.Repositories;
 using Bank.Domain.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Transactions;
 
@@ -7,6 +8,7 @@ using System.Transactions;
 
 namespace Bank.Controllers
 {
+    [EnableCors("AllowSpecificOrigin")]
     [Route("api/[controller]")]
     [ApiController]
     public class TransactionController : ControllerBase

@@ -1,0 +1,9 @@
+table {
+  width: 100%;
+}
+  table th, td {
+    border-bottom: 1px solid #eee;
+    padding: 1em;
+    text-align: center;
+  }
+table thead { background-color: #ffffff;}

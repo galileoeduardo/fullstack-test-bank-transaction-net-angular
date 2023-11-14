@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -16,14 +15,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { TransactionListComponent } from './transaction/transaction-list/transaction-list.component';
+import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CounterComponent,
     FetchDataComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    TransactionListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +33,7 @@ import { MatListModule } from '@angular/material/list';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: 'transactions', component: TransactionListComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
     BrowserAnimationsModule,
@@ -40,7 +42,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

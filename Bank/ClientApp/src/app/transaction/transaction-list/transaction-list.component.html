@@ -1,0 +1,27 @@
+<h1 id="tableLabel">Extrato</h1>
+
+<p>Lançamentos</p>
+
+<p *ngIf="!transactions?.length"><em>Loading...</em></p>
+  <table class="mat-responsive-table" aria-labelledby="tableLabel" *ngIf="transactions.length">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Data</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Avulso</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.date }}</td>
+        <td >{{ transaction.description }}</td>
+        <td class="right">{{ transaction.value }}</td>
+        <td>{{ transaction.doubtful }}</td>
+        <td>{{ transaction.status }}</td>
+      </tr>
+    </tbody>
+  </table>
